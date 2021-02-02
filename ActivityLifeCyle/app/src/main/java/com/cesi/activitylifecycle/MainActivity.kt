@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 
 class MainActivity : AppCompatActivity() {
-    // Cette ligne équivaut à la ligne d'après
+    // Cette prochaine ligne équivaut à la ligne d'après
     // val TAG = "MainActivity"
     val TAG : String = "MainActivity"
 
@@ -20,5 +20,35 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
 
         Log.i(TAG, "Je suis dans le OnStart")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.i(TAG, "Je suis dans le OnStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.i(TAG, "Je suis dans le OnDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+        Log.i(TAG, "Je suis dans le OnRestart")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.i(TAG, "Je suis dans le OnPause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.i(TAG, "Je suis dans le OnResume")
     }
 }
