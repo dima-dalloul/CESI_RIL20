@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">ActivityLifeCycle</string>
-    <string name="home">Accueil</string>
+    <string name="app_name" translatable="false">ActivityLifeCycle</string>
+    <string name="home">Home</string>
+    <string name="hello">Hello</string>
 </resources>
