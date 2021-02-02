@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Phrases Cultes</string>
+
+    <string-array name="phrasescultes">
+        <item>La vie c\'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber.</item>
+        <item>À la guerre comme à la guerre</item>
+        <item>Le gras c\'est la vie !</item>
+        <item>May the force be with you</item>
+        <item>Vous voulez un whisky ? Juste un doigt. Vous voulez pas un whisky d\'abord ?</item>
+        <item>Rien ne sert de courir, il faut partir à point</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>J\'ai l\'air fin des haricots</item>
+        <item>Un grand pouvoir implique de grandes responsabilités</item>
+        <item>Changer le monde, changer le monde vous êtes bien sympathiques mais faudrait déjà vous lever le matin</item>
+        <item>J\’ai 99 problèmes mais une tchoin n\’en est pas un</item>
+        <item>Et on lui pélera le jont comme au baillis du limousin qu\'on a pendu un beau matin AVEC SES TRIPES</item>
+        <item>De deux choses l\'une l\'autre c\'est le soleil</item>
+        <item>Quand on s\'endort avec le cul qui gratte, on se réveille avec les doigts qui puent. Proverbe chinois</item>
+        <item>C\'est pour rire, gamin</item>
+        <item>C\'est pas au vieux singe qu\'on apprend à manger des limaces</item>
+        <item>M. Gus ce qui va pas chez vous c\'est le planter de bâton !</item>
+        <item>Geek is sexy</item>
+        <item>It\'s not a bug it\'s a feature</item>
+        <item>It works on my machine</item>
+        <item>C\'est un problème de type ICM, Interface Chaise Machine</item>
+        <item>Mon nom est Bond, James Bond</item>
+        <item>Elle m\'a pas followback quand je l\'ai follow, pouloulou</item>
+    </string-array>
+</resources>
