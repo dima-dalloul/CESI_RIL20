@@ -3,8 +3,10 @@ package com.cesi.phrasescultes
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 
 class PhrasesCultesActivity : AppCompatActivity() {
     var TAG : String = "PhrasesCultesActivity"
@@ -36,5 +38,13 @@ class PhrasesCultesActivity : AppCompatActivity() {
         val indicePhraseAleatoire = (min until max).random()
         helloWorldTextView.setText(listePhrasesCultes.get(indicePhraseAleatoire))
         Log.i(TAG, "phrase aléatoire est : " + listePhrasesCultes.get(indicePhraseAleatoire))
+
+        // Changement de la couleur et de la taille du HelloWorld TextView
+        helloWorldTextView.setTextColor(ContextCompat.getColor(this, android.R.color.holo_orange_light))
+        helloWorldTextView.setTextSize(resources.getDimension(R.dimen.titre_accueil))
+
+        // Changement de la couleur du bouton
+        var bouton = findViewById<Button>(R.id.button)
+        bouton.setBackgroundColor(ContextCompat.getColor(this, R.color.nouvelle_couleur))
     }
 }
