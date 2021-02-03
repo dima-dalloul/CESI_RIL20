@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Bonjour</string>
+    <string name="prenom">Prénom</string>
+    <string name="nom">Nom</string>
+    <string name="ajouter_contact">Ajouter</string>
+    <string name="annuler">Annuler</string>
+    <string name="helloWorld">Bonjour le Monde</string>
+</resources>

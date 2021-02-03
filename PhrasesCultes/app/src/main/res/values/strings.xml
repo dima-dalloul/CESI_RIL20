@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Phrases Cultes</string>
+    <string name="app_name" translatable="false">Phrases Cultes</string>
     <string name="hello">Hello</string>
-    <string name="prenom">Prénom</string>
-    <string name="nom">Nom</string>
-    <string name="ajouter_contact">Ajouter</string>
-    <string name="annuler">Annuler</string>
+    <string name="prenom">First Name</string>
+    <string name="nom">Last name</string>
+    <string name="ajouter_contact">Add</string>
+    <string name="annuler">Cancel</string>
 
     <string-array name="phrasescultes">
         <item>La vie c\'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber.</item>
@@ -31,4 +31,5 @@
         <item>Mon nom est Bond, James Bond</item>
         <item>Elle m\'a pas followback quand je l\'ai follow, pouloulou</item>
     </string-array>
+    <string name="helloWorld">Hello World</string>
 </resources>
