@@ -32,4 +32,7 @@
         <item>Elle m\'a pas followback quand je l\'ai follow, pouloulou</item>
     </string-array>
     <string name="helloWorld">Hello World</string>
+    <string name="AutoCompleteHint">Write a planet name</string>
+    <string name="navigate_to_brouillon">Go to Brouillon</string>
+    <string name="Back">Go back</string>
 </resources>

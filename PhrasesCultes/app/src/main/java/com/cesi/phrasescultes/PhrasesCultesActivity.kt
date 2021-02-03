@@ -1,5 +1,6 @@
 package com.cesi.phrasescultes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.cesi.phrasescultes.exercices.BrouillonCours3
 
 class PhrasesCultesActivity : AppCompatActivity() {
     var TAG : String = "PhrasesCultesActivity"
@@ -46,5 +48,9 @@ class PhrasesCultesActivity : AppCompatActivity() {
         // Changement de la couleur du bouton
         var bouton = findViewById<Button>(R.id.button)
         bouton.setBackgroundColor(ContextCompat.getColor(this, R.color.nouvelle_couleur))
+        bouton.setOnClickListener {
+            val intent : Intent = Intent(this, BrouillonCours3::class.java)
+            startActivity(intent)
+        }
     }
 }

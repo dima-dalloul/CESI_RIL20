@@ -6,4 +6,7 @@
     <string name="ajouter_contact">Ajouter</string>
     <string name="annuler">Annuler</string>
     <string name="helloWorld">Bonjour le Monde</string>
+    <string name="AutoCompleteHint">Écrivez le nom d\'une planète</string>
+    <string name="navigate_to_brouillon">Aller au Brouillon</string>
+    <string name="Back">Revenir en arrière</string>
 </resources>

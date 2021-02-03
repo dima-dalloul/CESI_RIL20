@@ -12,21 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhrasesCultesStyleNouveau">
         <activity android:name=".PhrasesCultesActivity">
-        </activity>
-
-        <activity android:name=".exercices.AjoutContactCours3">
-        </activity>
-
-        <activity android:name=".exercices.MaWebView">
-        </activity>
-
-        <activity android:name=".exercices.RelativeLayoutCours3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".exercices.AjoutContactCours3"></activity>
+
+        <activity android:name=".exercices.MaWebView"></activity>
+
+        <activity android:name=".exercices.RelativeLayoutCours3"></activity>
+
+        <activity android:name=".exercices.BrouillonCours3"></activity>
     </application>
 
 </manifest>
