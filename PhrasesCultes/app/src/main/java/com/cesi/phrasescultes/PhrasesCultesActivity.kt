@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -16,6 +18,7 @@ import com.cesi.phrasescultes.exercices.BrouillonCours3
 class PhrasesCultesActivity : AppCompatActivity() {
     var TAG : String = "PhrasesCultesActivity"
     var listePhrasesCultes : ArrayList<String> = ArrayList<String>()
+    var uneSeulePhraseAAjouter: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,26 +63,59 @@ class PhrasesCultesActivity : AppCompatActivity() {
         val ajouterPhraseEditText : EditText = findViewById(R.id.ajoutPhrase_EditText)
         val ajouterPhraseBouton : Button = findViewById(R.id.ajoutPhrase_bouton)
 
+        // Listener sur le bouton Ajouter Phrase
         ajouterPhraseBouton.setOnClickListener {
-            // Je récupère la phrase de l'utilisateur
-            var phraseEcriteParUtilisateur = ajouterPhraseEditText.text.toString()
-
-            // Je l'ajoute dans la liste des phrases cultes
-            listePhrasesCultes.add(phraseEcriteParUtilisateur)
-
-            // Je change le TextView HelloWorld avec cette phrase là
-            helloWorldTextView.text = phraseEcriteParUtilisateur
-
-            // Je vide l'Edit Texte de l'ajout de Phrase
-            ajouterPhraseEditText.setText("")
-
-            // Je cache le clavier
-            cacherClavier(ajouterPhraseEditText)
+            ajouterPhraseEtCacherClavier(ajouterPhraseEditText, helloWorldTextView)
         }
+
+        // Listener sur le clavier de l'Edit Text
+        ajouterPhraseEditText.setOnKeyListener(View.OnKeyListener{
+            view, keyCode, event ->
+            if(keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP){
+                ajouterPhraseEtCacherClavier(ajouterPhraseEditText, helloWorldTextView)
+                return@OnKeyListener true
+            }
+            false
+        })
+
     }
 
+    fun ajouterPhraseEtCacherClavier(ajouterPhraseEditText: EditText, helloWorldTextView: TextView) {
+        // Je récupère la phrase de l'utilisateur
+        var phraseEcriteParUtilisateur = ajouterPhraseEditText.text.toString()
+
+        // Je l'ajoute dans la liste des phrases cultes
+        listePhrasesCultes.add(phraseEcriteParUtilisateur)
+
+        // Je change le TextView HelloWorld avec cette phrase là
+        helloWorldTextView.text = phraseEcriteParUtilisateur
+
+        // Je vide l'Edit Texte de l'ajout de Phrase
+        ajouterPhraseEditText.setText("")
+
+        // Je cache le clavier
+        cacherClavier(ajouterPhraseEditText)
+
+        // Je récupère la phrase et la stocke temporairement
+        uneSeulePhraseAAjouter = phraseEcriteParUtilisateur
+    }
+
+    // Méthode pour cacher le clavier
     fun cacherClavier(editText: EditText) {
         val gestionnaireClaviers : InputMethodManager = this.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         gestionnaireClaviers.hideSoftInputFromWindow(editText.windowToken, 0)
+    }
+
+    // Méthode pour sauvegarder une instance de la classe
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putString("PhraseUtilisateur", uneSeulePhraseAAjouter)
+        super.onSaveInstanceState(outState)
+    }
+
+    // Méthode pour restaurer une instance de la classe
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        uneSeulePhraseAAjouter = savedInstanceState.getString("PhraseUtilisateur").toString()
+        listePhrasesCultes.add(uneSeulePhraseAAjouter)
     }
 }
