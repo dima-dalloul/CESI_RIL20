@@ -7,5 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
     <color name="nouvelle_couleur">#C51162</color>
+
+    <!-- Nouveau Style -->
+    <color name="jaune_clair">#E4E626</color>
+    <color name="jaune_fonce">#8B8C1B</color>
+    <color name="bleu_clair">#B94979FD</color>
+    <color name="bleu_fonce">#1B30AA</color>
 </resources>

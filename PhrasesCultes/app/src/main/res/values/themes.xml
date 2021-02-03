@@ -13,4 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.PhrasesCultesStyleNouveau" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/jaune_clair</item>
+    <item name="colorPrimaryVariant">@color/jaune_fonce</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/bleu_clair</item>
+    <item name="colorSecondaryVariant">@color/bleu_fonce</item>
+    <item name="colorOnSecondary">@color/black</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <!-- Customize your theme here. -->
+</style>
 </resources>
