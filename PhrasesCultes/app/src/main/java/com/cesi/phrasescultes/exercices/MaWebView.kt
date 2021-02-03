@@ -1,4 +1,4 @@
-package com.cesi.phrasescultes
+package com.cesi.phrasescultes.exercices
 
 import android.os.Bundle
 import android.webkit.WebView

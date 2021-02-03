@@ -14,13 +14,13 @@
         <activity android:name=".PhrasesCultesActivity">
         </activity>
 
-        <activity android:name=".AjoutContactCours3">
+        <activity android:name=".exercices.AjoutContactCours3">
         </activity>
 
-        <activity android:name=".MaWebView">
+        <activity android:name=".exercices.MaWebView">
         </activity>
 
-        <activity android:name=".RelativeLayoutCours3">
+        <activity android:name=".exercices.RelativeLayoutCours3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

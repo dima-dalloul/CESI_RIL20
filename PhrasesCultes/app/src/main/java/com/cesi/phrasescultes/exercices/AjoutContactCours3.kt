@@ -1,9 +1,10 @@
-package com.cesi.phrasescultes
+package com.cesi.phrasescultes.exercices
 
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.cesi.phrasescultes.R
 
 class AjoutContactCours3 : AppCompatActivity() {
 
