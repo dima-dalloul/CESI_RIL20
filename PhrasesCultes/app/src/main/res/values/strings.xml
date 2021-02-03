@@ -3,7 +3,7 @@
     <string name="hello">Hello</string>
     <string name="prenom">First Name</string>
     <string name="nom">Last name</string>
-    <string name="ajouter_contact">Add</string>
+    <string name="ajouter">Add</string>
     <string name="annuler">Cancel</string>
 
     <string-array name="phrasescultes">
@@ -35,4 +35,5 @@
     <string name="AutoCompleteHint">Write a planet name</string>
     <string name="navigate_to_brouillon">Go to Brouillon</string>
     <string name="Back">Go back</string>
+    <string name="addPhraseCulteHint">Please write a sentence</string>
 </resources>

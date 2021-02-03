@@ -3,10 +3,11 @@
     <string name="hello">Bonjour</string>
     <string name="prenom">Prénom</string>
     <string name="nom">Nom</string>
-    <string name="ajouter_contact">Ajouter</string>
+    <string name="ajouter">Ajouter</string>
     <string name="annuler">Annuler</string>
     <string name="helloWorld">Bonjour le Monde</string>
     <string name="AutoCompleteHint">Écrivez le nom d\'une planète</string>
     <string name="navigate_to_brouillon">Aller au Brouillon</string>
     <string name="Back">Revenir en arrière</string>
+    <string name="addPhraseCulteHint">Écrivez une phrase culte</string>
 </resources>

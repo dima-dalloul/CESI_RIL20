@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:padding="@dimen/petit_padding"
-            android:text="@string/ajouter_contact" />
+            android:text="@string/ajouter" />
 
         <Button
             android:id="@+id/bouton_annuler"

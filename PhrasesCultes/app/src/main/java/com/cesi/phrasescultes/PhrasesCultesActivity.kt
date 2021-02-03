@@ -1,10 +1,13 @@
 package com.cesi.phrasescultes
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -52,5 +55,31 @@ class PhrasesCultesActivity : AppCompatActivity() {
             val intent : Intent = Intent(this, BrouillonCours3::class.java)
             startActivity(intent)
         }
+
+        // FONCTIONNALITÉ : Ajouter une phrase culte depuis l'edit Text
+        val ajouterPhraseEditText : EditText = findViewById(R.id.ajoutPhrase_EditText)
+        val ajouterPhraseBouton : Button = findViewById(R.id.ajoutPhrase_bouton)
+
+        ajouterPhraseBouton.setOnClickListener {
+            // Je récupère la phrase de l'utilisateur
+            var phraseEcriteParUtilisateur = ajouterPhraseEditText.text.toString()
+
+            // Je l'ajoute dans la liste des phrases cultes
+            listePhrasesCultes.add(phraseEcriteParUtilisateur)
+
+            // Je change le TextView HelloWorld avec cette phrase là
+            helloWorldTextView.text = phraseEcriteParUtilisateur
+
+            // Je vide l'Edit Texte de l'ajout de Phrase
+            ajouterPhraseEditText.setText("")
+
+            // Je cache le clavier
+            cacherClavier(ajouterPhraseEditText)
+        }
+    }
+
+    fun cacherClavier(editText: EditText) {
+        val gestionnaireClaviers : InputMethodManager = this.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        gestionnaireClaviers.hideSoftInputFromWindow(editText.windowToken, 0)
     }
 }
