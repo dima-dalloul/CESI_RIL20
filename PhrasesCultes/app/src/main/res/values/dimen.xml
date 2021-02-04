@@ -2,4 +2,5 @@
 <resources>
     <dimen name="titre_accueil">18sp</dimen>
     <dimen name="petit_padding">10dp</dimen>
+    <dimen name="taille_text_list">14sp</dimen>
 </resources>

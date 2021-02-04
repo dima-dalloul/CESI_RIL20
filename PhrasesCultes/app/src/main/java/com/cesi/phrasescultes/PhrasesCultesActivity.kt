@@ -8,10 +8,7 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.content.ContextCompat
 import com.cesi.phrasescultes.exercices.BrouillonCours3
 
@@ -77,6 +74,23 @@ class PhrasesCultesActivity : AppCompatActivity() {
             }
             false
         })
+
+        // FONCTIONNALITÉ : Ajouter les phrases cultes depuis le Strings.xml vers la ListView
+        // Créer l'adaptateur pour afficher les phrases cultes
+        // OPTION 1:
+        // val phrasesCultesListViewAdaptateur = ArrayAdapter<String>(this, R.layout.phrasescultes_textview_pour_listview, listePhrasesCultes)
+        // OPTION 2:
+        val phrasesCultesListViewAdaptateur = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listePhrasesCultes)
+
+        // Récupérer une référence de la ListView et associer l'adaptateur crée à cette Listview
+        var phrasesCultesListView : ListView = findViewById(R.id.phrasesCultes_ListView)
+        phrasesCultesListView.adapter = phrasesCultesListViewAdaptateur
+
+        // Créer un écouteur sur la ListView
+        phrasesCultesListView.setOnItemClickListener{
+            parent, view, position, id ->
+            Toast.makeText(this, "Vous avez cliqué sur la position " + position, Toast.LENGTH_SHORT).show()
+        }
 
     }
 

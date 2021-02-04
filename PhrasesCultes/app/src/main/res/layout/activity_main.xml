@@ -43,4 +43,9 @@
         android:layout_height="wrap_content"
         android:text="@string/navigate_to_brouillon" />
 
+    <ListView
+        android:id="@+id/phrasesCultes_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>
